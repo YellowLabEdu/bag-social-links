@@ -1,12 +1,9 @@
-//!import viteLogo from '/vite.svg'
-import './App.css'
+import { BagSocialLinks } from "./pages/BagSocialLinks"
 
 function App() {
   return (
     <>
-      <h1>
-        Hello World!
-      </h1>
+      <BagSocialLinks />
     </>
   )
 }
