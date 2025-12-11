@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+body {
+  min-height: 100vh; /*Ocupa toda a tela*/
+  background: var(--color-gradient-yellow-1);
+  background-repeat: no-repeat; /*Impede repetir faixas*/
+  background-attachment: fixed; /*Fixa o gradiente*/
+}
+
 :root {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -13,5 +20,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color-gradient-01: linear-gradient(180deg, #FF7A00 30%, #FFD93D 40%);
+  --color-gradient-02: linear-gradient(180deg, #003366 10%, #FFD93D 60%);
+  --color-color-light-gray: #FFFFFF;
+  --color-color-blue-dark: #003366;
+  --color-gradient-yellow-1: linear-gradient(180deg, #FFD93D 100%, #FFD93D 100%);
+  --color-tech-blue: #0077FF;
+  --color-color-dark-gray: #1F1F1F; 
 }
 
