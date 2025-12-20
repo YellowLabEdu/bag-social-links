@@ -1,4 +1,4 @@
-export function BagSocialLinks() {
+export default function BagSocialLinks() {
   return (
     <>
       <h1 className="text-3xl underline">
