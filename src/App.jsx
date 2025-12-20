@@ -1,9 +1,9 @@
-import { BagSocialLinks } from "./pages/BagSocialLinks"
+import BagAzul from "./pages/BagSocialLinksAzul"
 
 function App() {
   return (
     <>
-      <BagSocialLinks />
+      <BagAzul />
     </>
   )
 }
