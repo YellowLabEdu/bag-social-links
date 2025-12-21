@@ -1,11 +1,10 @@
-import BagSocialLinksAzul from "./pages/BagSocialLinksAzul"
-
+import BagSocialLinks from "./pages/BagSocialLinks"
 
 function App() {
   return (
-    <>
-      <BagSocialLinksAzul />
-    </>
+    <div className="bg-gradient-01">
+      <BagSocialLinks/> 
+    </div>
   )
 }
 
