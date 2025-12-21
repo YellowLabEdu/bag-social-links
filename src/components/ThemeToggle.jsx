@@ -1,25 +1,13 @@
-import toggleImg from "../assets/Component - Switch.png";
+import toggleImg from "../assets/switch.png";
 
 export default function ThemeToggle() {
   return (
-    <button
-      className="
-        flex items-center justify-center
-        active:scale-95
-        transition
-      "
-      aria-label="Alternar tema"
-    >
+    <button className=" flex items-center justify-center 
+    active:scale-95 transition" aria-label="Alternar Tema">
       <img
         src={toggleImg}
-        alt="Toggle de tema"
-        className="
-          w-19
-          sm:w-17
-          md:w-19
-          max-w-full
-        "
-      />
+        alt="Toggle de Tema Dark"
+        className="w-17 h-12"/>
     </button>
   );
 }

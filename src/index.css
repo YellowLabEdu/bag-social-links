@@ -2,21 +2,38 @@
 
 body {
   min-height: 100vh; /*Ocupa toda a tela*/
-  background: var(--color-gradient-yellow-1);
-  background-repeat: no-repeat; /*Impede repetir faixas*/
-  background-attachment: fixed; /*Fixa o gradiente*/
 }
 
 :root {
+  --color-gradient-01: linear-gradient(180deg, #ff7a00 30%, #ffd93d 40%);
+  --color-gradient-02: linear-gradient(90deg, #003366 10%, #ffd93dA6 60%);
+  --color-color-blue-dark: #003366;
+  --color-tech-blue-light: #0077ff;
+  /* Social-links-light-mode */
+  --color-gradient-yellow-1: linear-gradient(180deg,#ffd93d 100%,#ffd93dcc 100%);
+  /* Texts Colors */
+  --color-color-dark-gray: #1f1f1f;
+    --color-color-light-white: #ffffff;
+  /* Social-links-dark-mode */
+  --color-social-links-dark-mode: linear-gradient(180deg,#0077ff 100%,#0077ffcc 100%);
+  --color-color-yellow: #ffd93d;
+  /* Modais claros */
+  --color-modal-LAFoca: #ce8830;
+  --color-modal-shmusic: #ff9149;
+  --color-modal-networking: #ffd93d;
+  --color-modal-about-yellowbagedu: #ffd93d;
+  /* Modais escuros */
+  --color-modal-LAFoca: #4d4d4d;
+  --color-modal-shmusic: #28279f;
+  --color-modal-networking: #003366;
+  --color-modal-about-yellowbagedu: #003366;
+
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 
-<<<<<<< HEAD
-=======
   font-family: "Nunito", sans-serif;
 
->>>>>>> 16d16596b88eac44693c47d436896e8471c99c28
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,31 +42,4 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
-  --color-gradient-01: linear-gradient(180deg, #ff7a00 30%, #ffd93d 40%);
-  --color-gradient-02: linear-gradient(90deg, #003366 10%, #ffd93dA6 60%);
-  --color-color-light-gray: #ffffff;
-  --color-color-blue-dark: #003366;
-  --color-gradient-yellow-1: linear-gradient(180deg,#ffd93d 100%,#ffd93dcc 100%);
-  --color-tech-blue: #0077ff;
-  --color-color-dark-gray: #1f1f1f;
-  /*Social-links-modo escuro*/
-<<<<<<< HEAD
-  --color-social-links-modo-escuro: linear-gradient(180deg,#0077ff 100%,#0077ffcc 100%);
-=======
-  --color-social-links-modo-azul: linear-gradient(180deg,#0077ff 100%,#0077ffcc 100%);
->>>>>>> 16d16596b88eac44693c47d436896e8471c99c28
-  --color-color-yellow: #ffd93d;
-  /*Modais claros*/
-  --color-modal-LAFoca: #ce8830;
-  --color-modal-shmusic: #ff9149;
-  --color-modal-networking: #ffd93d;
-  --color-modal-about-yellowbagedu: #ffd93d;
-  /*Modais escuros*/
-  --color-modal-LAFoca: #4d4d4d;
-  --color-modal-shmusic: #28279f;
-  --color-modal-networking: #003366;
-  --color-modal-about-yellowbagedu: #003366;
 }

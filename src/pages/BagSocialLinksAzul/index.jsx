@@ -2,11 +2,11 @@ import Header from "../../components/header"
 
 export default function BagSocialLinksAzul() {
   return (
-    <main  className="min-h-screen"
-      style={{
-        background: "var(--color-social-links-modo-azul)",
-      }}>
-      <Header />
-    </main>
+    <section className="sm:w-104 h-230 bg(--color-social-links-dark-mode)
+    flex flex-col items-center justify-center">
+      <main>
+        <Header />
+      </main>
+    </section>
   )
 }  
