@@ -40,6 +40,9 @@ body {
   /* Fonts */
   --font-Poppins: 'Poppins', sans-serif;
   --font-Nunito: 'Nunito', sans-serif;
+
+  /* bg immage */
+  --bg-image: url('./assets/bg-yellowbagedu.png');
 }
 
 @layer utilities {
@@ -49,5 +52,9 @@ body {
 
   .bg-gradient-02 {
     background: var(--color-gradient-social-links-light-mode);
+  }
+
+  .bg-image {
+    background-image: url('./assets/bg-yellowbagedu.png');
   }
 }
