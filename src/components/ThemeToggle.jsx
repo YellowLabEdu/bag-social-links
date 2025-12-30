@@ -6,7 +6,7 @@ export default function ThemeToggle() {
     active:scale-95 transition" aria-label="Alternar Tema">
       <img
         src={toggleImg}
-        alt="Toggle de Tema Dark"
+        alt="Toggle de Temas"
         className="w-17 h-12"/>
     </button>
   );
