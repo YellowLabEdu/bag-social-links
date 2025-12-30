@@ -1,5 +1,5 @@
-import baglogo from "../assets/bag-logo.png";
-import ThemeToggle from "./ThemeToggle";
+import baglogo from "../../assets/bag-logo.png";
+import ThemeToggle from "../ThemeToggle";
 
 export default function Header() {
   return (

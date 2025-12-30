@@ -1,4 +1,4 @@
-import toggleImg from "../assets/switch.png";
+import toggleImg from "../../assets/switch.png";
 
 export default function ThemeToggle() {
   return (
