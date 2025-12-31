@@ -23,7 +23,7 @@ body {
   --color-gradient-social-links-light-mode: linear-gradient(180deg,#ffd93d 100%,#ffd93dcc 100%);
   /* Texts Colors */
   --color-color-dark-gray: #1f1f1f;
-    --color-color-light-white: #ffffff;
+  --color-color-light-white: #ffffff;
   /* Social-links-dark-mode */
   --color-gradient-social-links-dark-mode: linear-gradient(180deg,#0077ff 100%,#0077ffcc 100%);
   --color-color-yellow: #ffd93d;
