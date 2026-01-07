@@ -10,7 +10,7 @@ const body = encodeURIComponent("Olá, gostaria de mais informações sobre a Ye
 
 //* Predefined WhatsApp parameters */
 const wppPhone = "5591993412953";
-const wppMessage = encodeURIComponent("Olá, gostaria de mais informações sobre a YellowBagEdu."); 
+const wppMessage = encodeURIComponent("Olá, gostaria de mais informações sobre a YellowBagEdu.");
 
 export default function Buttons() {
     
@@ -65,4 +65,3 @@ export default function Buttons() {
       </>  
     );
 }
-
