@@ -25,10 +25,9 @@ const actions = [
 
 export default function BagSocialLinks() {
   return (
-    <div className="sm:w-104 h-230 flex flex-col justify-center items-center 
-    gap-12">
+    <>
       <Header />
-      <main className="flex flex-col items-center gap-7 justify-center mt-4 mr-auto ml-auto mb-2">
+      <main className="flex flex-col items-center justify-center gap-8">
         {actions.map((action) => {
           return (
             <ActionsButtons
@@ -41,6 +40,6 @@ export default function BagSocialLinks() {
         })}
       </main>
       <Footer />      
-    </div>
+    </>
   )
 }  

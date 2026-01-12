@@ -7,7 +7,6 @@
 }
 
 body {
-  min-height: 100vh; /*Ocupa toda a tela*/
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
