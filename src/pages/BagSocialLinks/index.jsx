@@ -1,5 +1,6 @@
 import Header from "../../components/Header"
 import { ActionsButtons } from "../../components/ActionsButtons";
+import { Footer } from "../../components/Footer";
 
 const actions = [
     {
@@ -38,7 +39,8 @@ export default function BagSocialLinks() {
             />
           );
         })}
-      </main>      
+      </main>
+      <Footer />      
     </div>
   )
 }  
