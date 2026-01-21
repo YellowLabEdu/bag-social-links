@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Header from "../../components/Header"
 import { ActionsButtons } from "../../components/ActionsButtons";
 import { Footer } from "../../components/Footer";
+import { ModalBag } from "../../components/ModalsDark/ModalBag";
 
 import BgYellowBagEdu from "../../assets/bg-yellowbagedu.png"
 
@@ -26,6 +28,8 @@ const actions = [
 ];
 
 export default function BagSocialLinks() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="bg-gradient-01 w-98 h-230 flex flex-col justify-center items-center gap-6 m-auto">
       <Header />
@@ -34,16 +38,22 @@ export default function BagSocialLinks() {
         <main className="flex flex-col items-center justify-center gap-8">
           {actions.map((action) => {
             return (
-              <ActionsButtons
-                key={action.label}
-                as={action.as}
-                href={action.href}
-                label={action.label}
-              />
+                <ActionsButtons
+                  key={action.label}
+                  as={action.as}
+                  href={action.href}
+                  label={action.label}
+                  onClick= {() => action.onClick = setOpen(true)}
+                />
             );
           })}
+          <ModalBag 
+            isOpen={open} 
+            onClose={() => setOpen(false)} 
+            children={() => <div>Conteúdo do Modal</div>} 
+          />
         </main>    
-      </div>
+      </div>  
       <Footer />  
     </div>
   )
