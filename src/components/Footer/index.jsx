@@ -3,7 +3,7 @@ import IconWhatsApp from "./assets/icon-whatsapp.png";
 import IconInstagram from "./assets/icon-instagram.png";
 import iconLinkedin from "./assets/icon-linkedin.png";
 
-const baseFooterClass = "w-64 h-16 flex items-center justify-center gap-6 rounded-3xl bg-(--color-color-yellow) border-4 border-(--color-color-light-white) p-1 shadow-lg hover:scale-95 transition-transform duration-200";
+const baseFooterClass = "w-64 h-16 flex items-center justify-center gap-6 rounded-3xl bg-(--color-color-yellow) border-4 border-(--color-white) p-1 shadow-lg hover:scale-95 transition-transform duration-200";
 
 //* Predefined email parameters */
 const email = "institucional@yellowbagedu.com";

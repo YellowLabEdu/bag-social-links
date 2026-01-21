@@ -5,6 +5,7 @@ import { Footer } from "../../components/Footer";
 import { ModalBag } from "../../components/ModalsDark/ModalBag";
 
 import BgYellowBagEdu from "../../assets/bg-yellowbagedu.png"
+import IconCircle from "../../assets/icon-circle.svg"
 
 const actions = [
     {
@@ -50,8 +51,33 @@ export default function BagSocialLinks() {
           <ModalBag 
             isOpen={open} 
             onClose={() => setOpen(false)} 
-            children={() => <div>Conteúdo do Modal</div>} 
-          />
+          >          
+            <div className="bg-(--color-white) w-84 h-86 rounded-2xl flex flex-col items-center gap-4">
+              <button
+                className="relative "
+              >
+                 <img src={IconCircle} alt="ícone para sair do Modal" />
+              </button>
+              <div className=" w-80 flex flex-col items-center gap-8 p-4">
+                <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
+                <p className="text-(--color-color-dark-gray) text-sm text-justify">
+                  Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
+                  unindo inclusão, criatividade e acessibilidade. Nossa missão é clara: todos merecem aprender tecnologia de forma prática e intuitiva.  
+                  Preparamos seu(sua) filho(a) para o futuro digital. <br /> <br />
+                </p>
+              </div>
+              <button
+              className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
+              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200"
+              onClick={() => window.open('https://yellowbagedu.com/sobre-nos', '_blank', 'noopener,noreferrer')}
+              > Saiba Mais</button>
+            </div>
+            <button
+              className="w-52 h-12 bg-red-500 rounded-2xl 
+              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200"
+              onClick={() => setOpen(false)}
+              > Sair </button>
+          </ModalBag>  
         </main>    
       </div>  
       <Footer />  

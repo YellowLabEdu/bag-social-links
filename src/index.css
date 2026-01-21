@@ -16,13 +16,13 @@ body {
 :root {
   --color-gradient-01: linear-gradient(180deg, #ff7a00 30%, #ffd93d 40%);
   --color-gradient-02: linear-gradient(90deg, #003366 10%, #ffd93dA6 60%);
-  --color-color-blue-dark: #003366;
+  --color-blue-dark: #003366;
   --color-tech-blue-light: #0077ff;
   /* Social-links-light-mode */
   --color-gradient-social-links-light-mode: linear-gradient(180deg,#ffd93d 100%,#ffd93dcc 100%);
   /* Texts Colors */
   --color-color-dark-gray: #1f1f1f;
-  --color-color-light-white: #ffffff;
+  --color-white: #ffffff;
   /* Social-links-dark-mode */
   --color-gradient-social-links-dark-mode: linear-gradient(180deg,#0077ff 100%,#0077ffcc 100%);
   --color-color-yellow: #ffd93d;
@@ -34,8 +34,6 @@ body {
   /* Modais escuros */
   --color-modal-lafoca-dark: #4d4d4d;
   --color-modal-shmusic-dark: #28279f;
-  --color-modal-networking-dark: #003366;
-  --color-modal-about-yellowbagedu-dark: #003366;
   /* Fonts */
   --font-Poppins: 'Poppins', sans-serif;
   --font-Nunito: 'Nunito', sans-serif;
