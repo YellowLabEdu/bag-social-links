@@ -52,9 +52,10 @@ export default function BagSocialLinks() {
             isOpen={open} 
             onClose={() => setOpen(false)} 
           >          
-            <div className="bg-(--color-white) w-84 h-86 rounded-2xl flex flex-col items-center gap-4">
+            <div className="bg-(--color-white) w-84 h-86 rounded-2xl flex flex-col items-center justify-start gap-4">
               <button
-                className="relative "
+                className="self-end cursor-pointer"
+                onClick={() => setOpen(false)}
               >
                  <img src={IconCircle} alt="ícone para sair do Modal" />
               </button>
@@ -68,13 +69,13 @@ export default function BagSocialLinks() {
               </div>
               <button
               className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200"
-              onClick={() => window.open('https://yellowbagedu.com/sobre-nos', '_blank', 'noopener,noreferrer')}
+              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+              onClick={() => window.open('https://www.instagram.com/yellowbagedu/', '_blank', 'noopener,noreferrer')}
               > Saiba Mais</button>
             </div>
             <button
               className="w-52 h-12 bg-red-500 rounded-2xl 
-              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200"
+              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
               onClick={() => setOpen(false)}
               > Sair </button>
           </ModalBag>  

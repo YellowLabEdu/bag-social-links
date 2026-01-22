@@ -15,7 +15,7 @@ export function ModalBag({ isOpen, onClose, children }) {
             <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm" onClick={onClose}></div>
             {/* Modal content */}
             <div className="relative z-10 w-lg h-120 max-w-lg 
-            rounded-2xl bg-(--color-blue-dark) p-6 shadow-xl flex flex-col items-center justify-center">
+            rounded-2xl bg-(--color-blue-dark) p-6 shadow-xl flex flex-col items-center justify-center gap-6">
                 {children}
             </div>
         </div>
