@@ -60,7 +60,7 @@ export default function BagSocialLinks() {
   const partnership = partnershipsArray[currentPartnershipIndex];
 
   return (
-    <div className="bg-gradient-01 w-98 h-230 flex flex-col justify-center items-center gap-6 m-auto">
+    <div className="bg-gradient-01 max-w-110 md:max-w-210 h-230 md:h-320 lg:max-w-432 flex flex-col justify-center items-center gap-6">
       <Header />
       <div className="relative">
         <img className="z-0 top-0 -translate-y-20 absolute pointer-events-none " src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
@@ -138,13 +138,19 @@ export default function BagSocialLinks() {
                 onClick={() =>
                    setCurrentPartnershipIndex((prev) => prev + 1 < partnershipsArray.length ? prev + 1 : 0
                   )}> PRÓXIMO </button>
-              <button
-                className="w-40 h-12 bg-blue-500 rounded-2xl 
-                text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                onClick={() =>
-                   setCurrentPartnershipIndex((prev) => prev - 1 >= 0 ? prev - 1 : partnershipsArray.length - 1
+                  {currentPartnershipIndex > 0 && (
+                    <button
+                      className="w-40 h-12 bg-blue-400 rounded-2xl
+                      text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+                      onClick={() =>
+                        setCurrentPartnershipIndex((prev) =>
+                          prev - 1 >= 0 ? prev - 1 : partnershipsArray.length - 1
+                        )
+                      }
+                    >
+                      ANTERIOR
+                    </button>
                   )}
-                > ANTERIOR </button>
             </div>
             <button
               className="w-40 h-12 bg-red-500 rounded-2xl
