@@ -3,11 +3,11 @@ import { useEffect } from 'react';
 export function Modal({ isOpen, onClose, children}) {
     useEffect(() => {
         if (isOpen) {
-        document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         }
 
         return () => {
-        document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto";
         };
     }, [isOpen]);
 
@@ -15,9 +15,9 @@ export function Modal({ isOpen, onClose, children}) {
 
     return (
         <div className="fixed inset-2 z-50 flex items-center justify-center">
-            <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm" onClick={onClose}></div>
+            <div className="absolute inset-2 bg-black opacity-50 backdrop-blur-sm" onClick={onClose}></div>
             {/* Modal content */}
-            <div className="relative z-10 md:w-md w-lg h-128 max-w-lg 
+            <div className="relative z-10 md:w-md lg:w-lg h-128 lg:max-w-lg 
             rounded-2xl bg-(--color-blue-dark) p-10 shadow-xl flex flex-col items-center justify-center gap-4">
                 {children}
             </div>
