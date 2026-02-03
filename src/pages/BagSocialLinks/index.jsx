@@ -68,7 +68,7 @@ export default function BagSocialLinks() {
           <Header />
           <div className="relative">
             <img className="z-0 top-0 -translate-y-20 absolute pointer-events-none lg:hidden" src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
-            <main className="flex flex-col items-center justify-center gap-6 md:gap8">
+            <main className="flex flex-col items-center justify-center gap-6">
               {actions.map((action) => {
                 return (
                     <ActionsButtons
@@ -79,12 +79,10 @@ export default function BagSocialLinks() {
                       onClick={() => action.id === 1 ? setOpen01(true) : setOpen02(true)}
                     />
                 );
-              })}
-              <ModalBag 
-                isOpen={open01} 
-                onClose={() => setOpen01(false)} 
-              >          
-                <div className="bg-(--color-white) w-84 h-86 rounded-2xl flex flex-col items-center justify-start gap-4">
+              })} 
+            </main>
+            {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)}>         
+                <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-8">
                   <button
                     className="self-end cursor-pointer"
                     onClick={() => setOpen01(false)}
@@ -105,24 +103,23 @@ export default function BagSocialLinks() {
                   onClick={() => window.open('https://www.instagram.com/yellowbagedu/', '_blank', 'noopener,noreferrer')}
                   > SAIBA MAIS</button>
                 </div>
-                <button
+                <div>
+                  <button
                   className="w-52 h-12 bg-red-500 rounded-2xl 
                   text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
                   onClick={() => setOpen01(false)}
                   > SAIR </button>
-              </ModalBag>
-              <Modal
-                isOpen={open02}
-                onClose={() => setOpen02(false)}
-              >    
-                <div className="bg-(--color-white) w-84 h-90 rounded-2xl flex flex-col gap-2 p-6">
+                </div>
+            </ModalBag>}
+            { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)}>
+              <div className="bg-(--color-white) w-84 h-90 rounded-2xl flex flex-col gap-0.5">
                   <button
                       className="self-end cursor-pointer"
                       onClick={() => setOpen02(false)}
                     >
                     <img src={IconCircle} alt="ícone para sair do Modal" />
                   </button>
-                  <div key={partnership.id} className="flex flex-col items-center gap-4 px-4 md:px-6">
+                  <div key={partnership.id} className="flex flex-col items-center gap-3 px-4">
                       <img src={partnership.img} alt={`${partnership.name} logo`} />
                       <span>@{partnership.name}</span>
                       <p className="text-(--color-color-dark-gray) text-sm text-center pb-2">
@@ -135,7 +132,8 @@ export default function BagSocialLinks() {
                       > SAIBA MAIS </button>
                     </div>
                 </div>
-                <div className="flex flex-row-reverse items-center justify-center gap-2">              
+                <div className="flex flex-col items-center justify-start gap-3">
+                  <div className="flex flex-row-reverse items-center justify-center gap-2">              
                   <button
                   className="w-40 h-12 bg-emerald-500 rounded-2xl 
                   text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
@@ -156,13 +154,14 @@ export default function BagSocialLinks() {
                         </button>
                       )}
                 </div>
+                </div>
                 <button
                   className="w-40 h-12 bg-red-500 rounded-2xl
                   text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
                   onClick={() => setOpen02(false)}
                   > SAIR </button>
-              </Modal>  
-            </main>    
+            </Modal>
+            }    
           </div>  
           <Footer />  
       </div>
