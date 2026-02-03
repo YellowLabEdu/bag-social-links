@@ -62,9 +62,9 @@ export default function BagSocialLinks() {
   const partnership = partnershipsArray[currentPartnershipIndex];
 
   return (
-    <div className="bg-gradient-01 max-w-110 md:max-w-210 lg:max-w-432 min-h-200 md:min-h-320 lg:min-h-200 flex flex-col lg:flex-row justify-center items-center gap-6 md:scale-150 lg:scale-100">
+    <div className="bg-gradient-01 max-w-110 md:max-w-210 lg:max-w-432 min-h-200 md:min-h-320 lg:min-h-200 flex justify-center items-center gap-6">
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
-      <div className="flex flex-col justify-center items-center gap-16">
+         <div className="flex flex-col items-center justify-center gap-8">
           <Header />
           <div className="relative">
             <img className="z-0 top-0 -translate-y-20 absolute pointer-events-none lg:hidden" src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
@@ -161,9 +161,9 @@ export default function BagSocialLinks() {
                   onClick={() => setOpen02(false)}
                   > SAIR </button>
             </Modal>
-            }    
-          </div>  
-          <Footer />  
+            }     
+         </div>
+        <Footer />  
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />   
     </div>
