@@ -66,106 +66,103 @@ export default function BagSocialLinks() {
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8">
           <Header />
-          <div className="relative">
-            <img className="z-0 top-0 -translate-y-20 absolute pointer-events-none lg:hidden" src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
-            <main className="flex flex-col items-center justify-center gap-6">
-              {actions.map((action) => {
-                return (
-                    <ActionsButtons
-                      key={action.label}
-                      as={action.as}
-                      href={action.href}
-                      label={action.label}
-                      onClick={() => action.id === 1 ? setOpen01(true) : setOpen02(true)}
-                    />
-                );
-              })} 
-            </main>
-            {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)}>         
-                <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-8">
-                  <button
-                    className="self-end cursor-pointer"
-                    onClick={() => setOpen01(false)}
-                  >
-                    <img src={IconCircle} alt="ícone para sair do Modal" />
-                  </button>
-                  <div className=" w-80 flex flex-col items-center gap-8 p-4">
-                    <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
-                    <p className="text-(--color-color-dark-gray) text-sm text-justify">
-                      Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
-                      unindo inclusão, criatividade e acessibilidade. Nossa missão é clara: todos merecem aprender tecnologia de forma prática e intuitiva.  
-                      Preparamos seu(sua) filho(a) para o futuro digital. <br /> <br />
-                    </p>
-                  </div>
-                  <button
-                  className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-                  text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                  onClick={() => window.open('https://www.instagram.com/yellowbagedu/', '_blank', 'noopener,noreferrer')}
-                  > SAIBA MAIS</button>
-                </div>
-                <div>
-                  <button
-                  className="w-52 h-12 bg-red-500 rounded-2xl 
-                  text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                  onClick={() => setOpen01(false)}
-                  > SAIR </button>
-                </div>
-            </ModalBag>}
-            { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)}>
-              <div className="bg-(--color-white) w-84 h-90 rounded-2xl flex flex-col gap-0.5">
-                  <button
-                      className="self-end cursor-pointer"
-                      onClick={() => setOpen02(false)}
-                    >
-                    <img src={IconCircle} alt="ícone para sair do Modal" />
-                  </button>
-                  <div key={partnership.id} className="flex flex-col items-center gap-3 px-4">
-                      <img src={partnership.img} alt={`${partnership.name} logo`} />
-                      <span>@{partnership.name}</span>
-                      <p className="text-(--color-color-dark-gray) text-sm text-center pb-2">
-                        {partnership.description}
-                      </p>
-                      <button
-                      className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-                      text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                      onClick={() => window.open(partnership.link, '_blank', 'noopener,noreferrer')}
-                      > SAIBA MAIS </button>
-                    </div>
-                </div>
-                <div className="flex flex-col items-center justify-start gap-3">
-                  <div className="flex flex-row-reverse items-center justify-center gap-2">              
-                  <button
-                  className="w-40 h-12 bg-emerald-500 rounded-2xl 
-                  text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                    onClick={() =>
-                      setCurrentPartnershipIndex((prev) => prev + 1 < partnershipsArray.length ? prev + 1 : 0
-                      )}> PRÓXIMO </button>
-                      {currentPartnershipIndex > 0 && (
-                        <button
-                          className="w-40 h-12 bg-blue-400 rounded-2xl
-                          text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                          onClick={() =>
-                            setCurrentPartnershipIndex((prev) =>
-                              prev - 1 >= 0 ? prev - 1 : partnershipsArray.length - 1
-                            )
-                          }
-                        >
-                          ANTERIOR
-                        </button>
-                      )}
-                </div>
-                </div>
-                <button
-                  className="w-40 h-12 bg-red-500 rounded-2xl
-                  text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                  onClick={() => setOpen02(false)}
-                  > SAIR </button>
-            </Modal>
-            }     
-         </div>
+          <img className="z-0 top-0 -translate-y-20 absolute pointer-events-none lg:hidden" src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
+          <main className="flex flex-col items-center justify-center gap-6">
+            {actions.map((action) => {
+              return (
+                  <ActionsButtons
+                    key={action.label}
+                    as={action.as}
+                    href={action.href}
+                    label={action.label}
+                    onClick={() => action.id === 1 ? setOpen01(true) : setOpen02(true)}
+                  />
+              );
+            })} 
+          </main>   
         <Footer />  
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />   
+      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)}>         
+    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-8">
+      <button
+        className="self-end cursor-pointer"
+        onClick={() => setOpen01(false)}
+      >
+        <img src={IconCircle} alt="ícone para sair do Modal" />
+      </button>
+      <div className=" w-80 flex flex-col items-center gap-8 p-4">
+        <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
+        <p className="text-(--color-color-dark-gray) text-sm text-justify">
+          Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
+          unindo inclusão, criatividade e acessibilidade. Nossa missão é clara: todos merecem aprender tecnologia de forma prática e intuitiva.  
+          Preparamos seu(sua) filho(a) para o futuro digital. <br /> <br />
+        </p>
+      </div>
+      <button
+      className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
+      text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+      onClick={() => window.open('https://www.instagram.com/yellowbagedu/', '_blank', 'noopener,noreferrer')}
+      > SAIBA MAIS</button>
+    </div>
+    <div>
+      <button
+      className="w-52 h-12 bg-red-500 rounded-2xl 
+      text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+      onClick={() => setOpen01(false)}
+      > SAIR </button>
+    </div>
+    </ModalBag>}
+    { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)}>
+      <div className="bg-(--color-white) w-84 h-90 rounded-2xl flex flex-col gap-0.5">
+          <button
+              className="self-end cursor-pointer"
+              onClick={() => setOpen02(false)}
+            >
+            <img src={IconCircle} alt="ícone para sair do Modal" />
+          </button>
+          <div key={partnership.id} className="flex flex-col items-center gap-3 px-4">
+              <img src={partnership.img} alt={`${partnership.name} logo`} />
+              <span>@{partnership.name}</span>
+              <p className="text-(--color-color-dark-gray) text-sm text-center pb-2">
+                {partnership.description}
+              </p>
+              <button
+              className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
+              text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+              onClick={() => window.open(partnership.link, '_blank', 'noopener,noreferrer')}
+              > SAIBA MAIS </button>
+            </div>
+        </div>
+        <div className="flex flex-col items-center justify-start gap-3">
+          <div className="flex flex-row-reverse items-center justify-center gap-2">              
+          <button
+          className="w-40 h-12 bg-emerald-500 rounded-2xl 
+          text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+            onClick={() =>
+              setCurrentPartnershipIndex((prev) => prev + 1 < partnershipsArray.length ? prev + 1 : 0
+              )}> PRÓXIMO </button>
+              {currentPartnershipIndex > 0 && (
+                <button
+                  className="w-40 h-12 bg-blue-400 rounded-2xl
+                  text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+                  onClick={() =>
+                    setCurrentPartnershipIndex((prev) =>
+                      prev - 1 >= 0 ? prev - 1 : partnershipsArray.length - 1
+                    )
+                  }
+                >
+                  ANTERIOR
+                </button>
+              )}
+        </div>
+        </div>
+        <button
+          className="w-40 h-12 bg-red-500 rounded-2xl
+          text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+          onClick={() => setOpen02(false)}
+          > SAIR </button>
+    </Modal>}  
     </div>
   )
 }  
