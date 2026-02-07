@@ -5,7 +5,6 @@ import { Footer } from "../../components/Footer";
 import { ModalBag } from "../../components/ModalsDark/ModalBag";
 import { Modal } from "../../components/ModalsDark/ModalUnionAndPartnerships";
 
-import BgYellowBagEdu from "../../assets/bg-yellowbagedu.png"
 import BgYellowBagEdu01 from "../../assets/bg-ybedu1.png"
 import BgYellowBagEdu02 from "../../assets/bg-ybedu2.png"
 import IconCircle from "../../assets/icon-circle.svg"
@@ -41,11 +40,16 @@ export default function BagSocialLinks() {
   const [open02, setOpen02] = useState(false);
 
   return (
-    <div className="bg-gradient-01 max-w-110 md:max-w-210 lg:max-w-432 min-h-screen md:min-h-320 lg:min-h-200 flex justify-center items-center gap-4">
+    <div className="  bg-gradient-01 
+      max-w-110 md:max-w-210 lg:max-w-432 
+      min-h-screen 
+      flex justify-center items-center 
+      gap-4 
+      pb-20 md:pb-12 lg:pb-8
+      ">
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8 ">
           <Header />
-          <img className="z-0 top-32 absolute pointer-events-none lg:hidden" src={BgYellowBagEdu} alt="Background de formas geométricas da YellowBagEdu" />
           <main className="flex flex-col items-center justify-center gap-6">
             {actions.map((action) => {
               return (
@@ -63,7 +67,7 @@ export default function BagSocialLinks() {
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />   
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)}>         
-    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-8">
+    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
         className="self-end cursor-pointer"
         onClick={() => setOpen01(false)}
