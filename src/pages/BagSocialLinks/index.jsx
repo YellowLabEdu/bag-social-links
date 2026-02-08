@@ -42,7 +42,7 @@ export default function BagSocialLinks() {
   const [Mode, setMode] = useState(true);
 
   return (
-    <div className={Mode ? "bg-gradient-02 max-w-110 md:max-w-210 lg:max-w-432 min-h-screen flex justify-center items-center gap-4 pb-20 md:pb-12 lg:pb-8" : "bg-gradient-01 max-w-110 md:max-w-210 lg:max-w-432 min-h-screen flex justify-center items-center gap-4 pb-20 md:pb-12 lg:pb-8"}  >
+    <div className={Mode ? "bg-gradient-02 flex justify-center items-center max-w-full min-h-screen" : "bg-gradient-01 flex justify-center items-center max-w-full min-h-screen"}  >
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8 ">
           <Header 
