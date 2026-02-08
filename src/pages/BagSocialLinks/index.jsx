@@ -10,6 +10,7 @@ import BgYellowBagEdu02 from "../../assets/bg-ybedu2.png"
 import IconCircle from "../../assets/icon-circle.svg"
 import LaFoca from "../../assets/logo-lafoca.svg"
 import SHMusic from "../../assets/logo-shmusic.png"
+import toggleImg from "../../assets/switch.png";
 
 
 const actions = [
@@ -38,18 +39,26 @@ const actions = [
 export default function BagSocialLinks() {
   const [open01, setOpen01] = useState(false);
   const [open02, setOpen02] = useState(false);
+  const [Mode, setMode] = useState(true);
 
   return (
-    <div className="  bg-gradient-01 
-      max-w-110 md:max-w-210 lg:max-w-432 
-      min-h-screen 
-      flex justify-center items-center 
-      gap-4 
-      pb-20 md:pb-12 lg:pb-8
-      ">
+    <div className={Mode ? "bg-gradient-02 max-w-110 md:max-w-210 lg:max-w-432 min-h-screen flex justify-center items-center gap-4 pb-20 md:pb-12 lg:pb-8" : "bg-gradient-01 max-w-110 md:max-w-210 lg:max-w-432 min-h-screen flex justify-center items-center gap-4 pb-20 md:pb-12 lg:pb-8"}  >
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8 ">
-          <Header />
+          <Header 
+          color={Mode ? "text-(--color-color-dark-gray)" : "text-(--color-white)"}
+          />
+          <button className={Mode ? "flex items-center justify-center active:scale-95 transition rotate-y-0" : "flex items-center justify-center active:scale-95 transition rotate-y-180"} aria-label="Alternar Tema"
+          onClick={() => {
+            console.log("clicou");
+            setMode(!Mode);
+          }}
+          >
+            <img
+              src={toggleImg}
+              alt="Toggle de Temas"
+              className="w-17 h-12"/>
+          </button>
           <main className="flex flex-col items-center justify-center gap-6">
             {actions.map((action) => {
               return (
@@ -59,14 +68,17 @@ export default function BagSocialLinks() {
                     href={action.href}
                     label={action.label}
                     onClick={() => action.id === 1 ? setOpen01(true) : setOpen02(true)}
+                    color={Mode ? "bg-(--color-tech-blue-light) text-(--color-white)" : "bg-(--color-color-yellow) text-(--color-color-dark-gray)"}
                   />
               );
             })} 
           </main>   
-        <Footer />  
+        <Footer
+          color={Mode ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"}
+        />  
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />   
-      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)}>         
+      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
     <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
         className="self-end cursor-pointer"
@@ -89,7 +101,7 @@ export default function BagSocialLinks() {
       </div>
     </div>
     </ModalBag>}
-    { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)}>
+    { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>
       <div className="bg-(--color-white) w-80 h-58 rounded-2xl flex flex-col gap-6">
           <button
               className="self-end cursor-pointer"

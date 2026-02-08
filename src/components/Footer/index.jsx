@@ -3,8 +3,6 @@ import IconWhatsApp from "./assets/icon-whatsapp.png";
 import IconInstagram from "./assets/icon-instagram.png";
 import iconLinkedin from "./assets/icon-linkedin.png";
 
-const baseFooterClass = "w-64 h-16 z-1 flex items-center justify-center gap-6 rounded-3xl bg-(--color-color-yellow) border-4 border-(--color-white) p-2 shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer";
-
 //* Predefined email parameters */
 const email = "institucional@yellowbagedu.com";
 const subject = encodeURIComponent("Contato via YellowBagEdu Social Links");
@@ -37,7 +35,9 @@ const socialLinks = [
     }
 ]
 
-export function Footer() {
+export function Footer({color}) {
+    const baseFooterClass = `w-64 h-16 z-1 ${color} flex items-center justify-center gap-6 rounded-3xl border-4 border-(--color-white) p-2 shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer`;
+    
     return (
         <footer className={baseFooterClass}>
             {socialLinks.map(({ href, imgSrc, altText }) => (
