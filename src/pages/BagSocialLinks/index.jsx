@@ -2,8 +2,8 @@ import { useState } from "react";
 import Header from "../../components/Header"
 import { ActionsButtons } from "../../components/ActionsButtons";
 import { Footer } from "../../components/Footer";
-import { ModalBag } from "../../components/ModalsDark/ModalBag";
-import { Modal } from "../../components/ModalsDark/ModalUnionAndPartnerships";
+import { ModalBag } from "../../components/Modals/ModalBag";
+import { Modal } from "../../components/Modals/ModalUnionAndPartnerships";
 
 import BgYellowBagEdu01 from "../../assets/bg-ybedu1.png"
 import BgYellowBagEdu02 from "../../assets/bg-ybedu2.png"
