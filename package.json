@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://marcelosfilho13.github.io/bag-social-links",
+  "homepage": "https://yellowlabedu.github.io/bag-social-links",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
