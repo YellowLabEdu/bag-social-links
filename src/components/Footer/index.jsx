@@ -1,7 +1,7 @@
-import IconEmail from "./assets/icon-gmail.png";
-import IconWhatsApp from "./assets/icon-whatsapp.png";
-import IconInstagram from "./assets/icon-instagram.png";
-import iconLinkedin from "./assets/icon-linkedin.png";
+import IconEmail from "./assets/icon-gmail.svg";
+import IconWhatsApp from "./assets/icon-whatsapp.svg";
+import IconInstagram from "./assets/icon-instagram.svg";
+import iconLinkedin from "./assets/icon-linkedin.svg";
 
 //* Predefined email parameters */
 const email = "institucional@yellowbagedu.com";

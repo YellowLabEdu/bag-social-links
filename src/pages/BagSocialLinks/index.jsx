@@ -5,12 +5,12 @@ import { Footer } from "../../components/Footer";
 import { ModalBag } from "../../components/Modals/ModalBag";
 import { Modal } from "../../components/Modals/ModalUnionAndPartnerships";
 
-import BgYellowBagEdu01 from "../../assets/bg-ybedu1.png"
-import BgYellowBagEdu02 from "../../assets/bg-ybedu2.png"
+import BgYellowBagEdu01 from "../../assets/bg-ybedu-01.svg"
+import BgYellowBagEdu02 from "../../assets/bg-ybedu-02.svg"
 import IconCircle from "../../assets/icon-circle.svg"
 import LaFoca from "../../assets/logo-lafoca.svg"
-import SHMusic from "../../assets/logo-shmusic.png"
-import toggleImg from "../../assets/switch.png";
+import SHMusic from "../../assets/logo-shmusic.svg"
+import toggleImg from "../../assets/Switch.svg";
 
 
 const actions = [
@@ -42,8 +42,8 @@ export default function BagSocialLinks() {
   const [Mode, setMode] = useState(true);
 
   return (
-    <div className={Mode ? "bg-gradient-02 flex justify-center items-center max-w-full min-h-screen" : "bg-gradient-01 flex justify-center items-center max-w-full min-h-screen"}  >
-      <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
+      <div className={Mode ? "bg-gradient-02 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6"}  >
+        <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8 ">
           <Header 
           color={Mode ? "text-(--color-color-dark-gray)" : "text-(--color-white)"}
@@ -77,7 +77,7 @@ export default function BagSocialLinks() {
           color={Mode ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"}
         />  
       </div>
-      <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />   
+      <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
     <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
