@@ -79,7 +79,7 @@ export default function BagSocialLinks() {
       </div>
       <img className="hidden lg:block" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
-    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
+    <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
         className="self-end cursor-pointer"
         onClick={() => setOpen01(false)}
@@ -95,21 +95,21 @@ export default function BagSocialLinks() {
         </p>
         <button
         className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-       text-(--color-white) font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+       text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
         onClick={() => window.open('https://www.instagram.com/yellowbagedu/', '_blank', 'noopener,noreferrer')}
         > SAIBA MAIS</button>
       </div>
     </div>
     </ModalBag>}
     { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>
-      <div className="bg-(--color-white) w-80 h-58 rounded-2xl flex flex-col gap-6">
+      <div className="bg-white w-80 h-58 rounded-2xl flex flex-col gap-6">
           <button
               className="self-end cursor-pointer"
               onClick={() => setOpen02(false)}
             >
             <img src={IconCircle} alt="ícone para sair do Modal" />
           </button>
-          <div  className="flex flex justify-center items-center gap-6">
+          <div  className="flex justify-center items-center gap-6">
             <div className="flex flex-col justify-center items-center gap-4">
               <a className="cursor-pointer" href="https://www.instagram.com/lafocameta/" target="_blank" rel="noopener noreferrer">
                 <img src={LaFoca} alt={`LaFoca logo`} />
