@@ -42,8 +42,8 @@ export default function BagSocialLinks() {
   const [Mode, setMode] = useState(true);
 
   return (
-      <div className={Mode ? "bg-gradient-02 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6"}  >
-        <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
+      <div className={Mode ? "bg-gradient-02 min-h-230 md:min-h-screen flex items-center justify-center" : "bg-gradient-01 min-h-230 md:min-h-screen flex items-center justify-center"}  >
+        <img className="hidden lg:block" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-8 ">
           <Header 
           color={Mode ? "text-(--color-color-dark-gray)" : "text-(--color-white)"}
@@ -77,7 +77,7 @@ export default function BagSocialLinks() {
           color={Mode ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"}
         />  
       </div>
-      <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
+      <img className="hidden lg:block" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} color={Mode ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
     <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
