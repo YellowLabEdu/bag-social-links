@@ -1,6 +1,8 @@
-export function ActionsButtons({ as = "button", href, label, onClick, color }) {
+export function ActionsButtons({ as = "button", href, label, onClick, Color}) {
   const baseClasses = 
-  `z-1 flex items-center justify-center text-[20px] text-center font-Poppins font-medium cursor-pointer ${color} w-80 h-16 rounded-3xl p-4 shadow-lg hover:font-bold hover:scale-90 transition`;
+  `flex flex-col items-center justify-center gap-[24rem] text-[1.25rem] text-center ${Color}
+  font-Poppins font-medium cursor-pointer w-80 md:w-[26rem] h-16  rounded-3xl 
+  p-4 shadow-lg hover:font-bold hover:scale-90 transition`;
 
   if (as === "a") {
     return (
