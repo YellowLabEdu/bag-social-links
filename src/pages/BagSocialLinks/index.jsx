@@ -79,19 +79,18 @@ export default function BagSocialLinks() {
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
-    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-10">
+    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-start gap-16">
       <button
         className="self-end cursor-pointer"
         onClick={() => setOpen01(false)}
       >
         <img src={IconCircle} alt="ícone para sair do Modal" />
       </button>
-        <div className=" w-80 flex flex-col items-center gap-10" >
+      <div className=" w-80 flex flex-col items-center gap-4" >
           <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
           <p className="text-(--color-color-dark-gray) text-sm text-justify">
-            Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
-            unindo inclusão, criatividade e acessibilidade. <br /> <br />
-            Siga a YellowBagEdu nas redes sociais para ficar por dentro de todas as novidades, conteúdos exclusivos e oportunidades incríveis! <br /> <br />
+            Somos uma StartUp do Norte do Brasil que transforma o ensino de Pensamento Computacional com inclusão, criatividade e acessibilidade.
+            <br /><br />
             <span className="font-semibold">Instagram: @yellowbagedu</span> <br />
             <span className="font-semibold">E-mail: institucional@yellowbagedu.com</span>
           </p>
