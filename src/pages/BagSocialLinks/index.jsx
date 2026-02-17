@@ -78,7 +78,7 @@ export default function BagSocialLinks() {
         />  
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
-      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
+      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
     <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
       <button
         className="self-end cursor-pointer"
