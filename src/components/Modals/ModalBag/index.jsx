@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-
 export function ModalBag({ isOpen, onClose, children, Color }) {
     useEffect(() => {
     if (isOpen) {
