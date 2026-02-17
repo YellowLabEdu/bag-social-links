@@ -86,8 +86,8 @@ export default function BagSocialLinks() {
       >
         <img src={IconCircle} alt="ícone para sair do Modal" />
       </button>
-      <div className=" w-80 flex flex-col items-center gap-5">
-        <div className=" w-80 flex flex-col items-center gap-8" >
+      <div className=" w-80 flex flex-col items-center gap-8">
+        <div className=" w-80 flex flex-col items-center gap-9" >
           <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
           <p className="text-(--color-color-dark-gray) text-sm text-justify">
             Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
