@@ -42,7 +42,7 @@ export default function BagSocialLinks() {
   const [theme, setTheme] = useState(false)
 
   return (
-      <div className={theme ? "bg-gradient-02 min-h-240 md:min-h-300 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-256 md:min-h-300 flex items-center justify-center gap-6"}  >
+      <div className={theme ? "bg-gradient-02 min-h-240 md:min-h-320 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-240 md:min-h-320 flex items-center justify-center gap-6"}  >
         <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
          <div className="flex flex-col items-center justify-center gap-16 ">
           <Header 
