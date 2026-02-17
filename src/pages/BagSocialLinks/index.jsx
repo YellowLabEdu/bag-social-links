@@ -79,28 +79,30 @@ export default function BagSocialLinks() {
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
-    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
+    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-10">
       <button
         className="self-end cursor-pointer"
         onClick={() => setOpen01(false)}
       >
         <img src={IconCircle} alt="ícone para sair do Modal" />
       </button>
-      <div className=" w-80 flex flex-col items-center gap-10">
-        <div className=" w-80 flex flex-col items-center gap-8" >
+        <div className=" w-80 flex flex-col items-center gap-10" >
           <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
           <p className="text-(--color-color-dark-gray) text-sm text-justify">
             Somos uma Startup da Região Norte do Brasil que inova no ensino do Pensamento Computacional, 
-            unindo inclusão, criatividade e acessibilidade. Nossa missão é clara: todos merecem aprender tecnologia de forma prática e intuitiva.  
-            Preparamos seu(sua) filho(a) para o futuro digital. <br /> <br />
+            unindo inclusão, criatividade e acessibilidade. <br /> <br />
+            Siga a YellowBagEdu nas redes sociais para ficar por dentro de todas as novidades, conteúdos exclusivos e oportunidades incríveis! <br /> <br />
+            <span className="font-semibold">Instagram: @yellowbagedu</span> <br />
+            <span className="font-semibold">E-mail: institucional@yellowbagedu.com</span>
           </p>
         </div>
+        {/*
         <button
         className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-       text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+        text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
         onClick={() => window.location.assign("https://www.instagram.com/yellowbagedu/?utm_source=site", '_blank', 'noopener,noreferrer')}
         > SAIBA MAIS</button>
-      </div>
+        */}
     </div>
     </ModalBag>}
     { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>
@@ -112,17 +114,17 @@ export default function BagSocialLinks() {
             <img src={IconCircle} alt="ícone para sair do Modal" />
           </button>
           <div  className="flex justify-center items-center gap-6">
-            <div className="flex flex-col justify-center items-center gap-4">
+            <div className="flex flex-col justify-center items-center gap-6">
               <a className="cursor-pointer" href="https://www.instagram.com/lafocameta/?utm_source=website" target="_blank" rel="noopener noreferrer">
                 <img src={LaFoca} alt={`LaFoca logo`} />
               </a>
-              <span>@LAFoca</span>
+              <span className="font-semibold">@lafocameta</span>
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
               <a className="cursor-pointer" href="https://www.instagram.com/shmusic.escola2/?utm_source=website" target="_blank" rel="noopener noreferrer">
                 <img src={SHMusic} alt={`SHMusic logo`} />
               </a>
-              <span>@SHMusic</span>
+              <span className="font-semibold">@shmusic.escola2</span>
             </div>
           </div>
         </div>

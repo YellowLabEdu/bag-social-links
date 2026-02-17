@@ -1,6 +1,5 @@
 import IconEmail from "./assets/icon-gmail.svg";
 import IconWhatsApp from "./assets/icon-whatsapp.svg";
-import IconInstagram from "./assets/icon-instagram.svg";
 import iconLinkedin from "./assets/icon-linkedin.svg";
 
 //* Predefined email parameters */
@@ -22,11 +21,6 @@ const socialLinks = [
         href: `https://wa.me/${wppPhone}?text=${wppMessage}`,
         imgSrc: IconWhatsApp,
         altText: "Logotipo WhatsApp"
-    },
-    {
-        href: "https://www.instagram.com/yellowbagedu/?utm_source=site",
-        imgSrc: IconInstagram,
-        altText: "Logotipo Instagram"
     },
     {
         href: "https://www.linkedin.com/company/yellowbagedu/?viewAsMember=true",
