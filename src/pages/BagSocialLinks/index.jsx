@@ -98,7 +98,7 @@ export default function BagSocialLinks() {
         <button
         className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
        text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-        onClick={() => window.open('https://www.instagram.com/yellowbagedu?igsh=MTY0eXVrb2VzeHlmbA==', '_blank', 'noopener,noreferrer')}
+        onClick={() => window.location.assign("https://www.instagram.com/yellowbagedu/?utm_source=site", '_blank', 'noopener,noreferrer')}
         > SAIBA MAIS</button>
       </div>
     </div>
@@ -113,13 +113,13 @@ export default function BagSocialLinks() {
           </button>
           <div  className="flex justify-center items-center gap-6">
             <div className="flex flex-col justify-center items-center gap-4">
-              <a className="cursor-pointer" href="https://www.instagram.com/lafocameta?igsh=dmZwaGZ4cGlpdzQx" target="_blank" rel="noopener noreferrer">
+              <a className="cursor-pointer" href="https://www.instagram.com/lafocameta/?utm_source=website" target="_blank" rel="noopener noreferrer">
                 <img src={LaFoca} alt={`LaFoca logo`} />
               </a>
               <span>@LAFoca</span>
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
-              <a className="cursor-pointer" href="https://www.instagram.com/shmusic.escola2?igsh=MTM2MGs2bWZ1aTBxeA==" target="_blank" rel="noopener noreferrer">
+              <a className="cursor-pointer" href="https://www.instagram.com/shmusic.escola2/?utm_source=website" target="_blank" rel="noopener noreferrer">
                 <img src={SHMusic} alt={`SHMusic logo`} />
               </a>
               <span>@SHMusic</span>

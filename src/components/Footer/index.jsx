@@ -24,7 +24,7 @@ const socialLinks = [
         altText: "Logotipo WhatsApp"
     },
     {
-        href: "https://www.instagram.com/yellowbagedu?igsh=MTY0eXVrb2VzeHlmbA==",
+        href: "https://www.instagram.com/yellowbagedu/?utm_source=site",
         imgSrc: IconInstagram,
         altText: "Logotipo Instagram"
     },
