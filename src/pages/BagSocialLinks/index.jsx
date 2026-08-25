@@ -16,7 +16,7 @@ import SHMusic from "../../assets/logo-shmusic.svg"
 const actions = [
     {
         as: 'a',
-        label: 'Experiência YellowBagEdu',
+        label: 'Experiência GRATUITA',
         href: 'https://forms.gle/VNJrn1twk2L1gYiBA'
     },
     {
