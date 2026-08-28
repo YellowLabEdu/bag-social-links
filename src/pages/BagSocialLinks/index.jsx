@@ -54,7 +54,7 @@ export default function BagSocialLinks() {
       }
     >
       <img
-        className="hidden lg:block max-w-[20.75rem]"
+        className="hidden lg:block max-w-83"
         src={BgYellowBagEdu01}
         alt="Background YellowBagEdu"
       />
@@ -105,7 +105,7 @@ export default function BagSocialLinks() {
         />
       </div>
       <img
-        className="hidden lg:block max-w-[20.75rem]"
+        className="hidden lg:block max-w-83"
         src={BgYellowBagEdu02}
         alt="Background YellowBagEdu"
       />
@@ -115,7 +115,7 @@ export default function BagSocialLinks() {
           onClose={() => setOpen01(false)}
           Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
         >
-          <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
+          <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
             <button
               className="self-end cursor-pointer"
               onClick={() => setOpen01(false)}
