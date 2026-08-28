@@ -49,12 +49,12 @@ export default function BagSocialLinks() {
     <div
       className={
         theme
-          ? "bg-gradient-02 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6"
-          : "bg-gradient-01 min-h-240 md:min-h-260 md:scale-130 lg:scale-100 flex items-center justify-center gap-6"
+          ? "bg-gradient-02 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
+          : "bg-gradient-01 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
       }
     >
       <img
-        className="hidden lg:block lg:scale-90"
+        className="hidden lg:block max-w-[20.75rem]"
         src={BgYellowBagEdu01}
         alt="Background YellowBagEdu"
       />
@@ -105,7 +105,7 @@ export default function BagSocialLinks() {
         />
       </div>
       <img
-        className="hidden lg:block lg:scale-90"
+        className="hidden lg:block max-w-[20.75rem]"
         src={BgYellowBagEdu02}
         alt="Background YellowBagEdu"
       />
