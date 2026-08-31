@@ -1,45 +1,49 @@
 import { useState } from "react";
-import Header from "../../components/Header"
+import Header from "../../components/Header";
 import { ActionsButtons } from "../../components/ActionsButtons";
 import { Footer } from "../../components/Footer";
 import { ModalBag } from "../../components/Modals/ModalBag";
 import { Modal } from "../../components/Modals/ModalUnionAndPartnerships";
 
 import toggleImg from "../../assets/Switch.svg";
-import BgYellowBagEdu01 from "../../assets/bg-ybedu-01.svg"
-import BgYellowBagEdu02 from "../../assets/bg-ybedu-02.svg"
-import IconCircle from "../../assets/icon-circle.svg"
-import LaFoca from "../../assets/logo-lafoca.svg"
-import SHMusic from "../../assets/logo-shmusic.svg"
-
+import BgYellowBagEdu01 from "../../assets/bg-ybedu-01.svg";
+import BgYellowBagEdu02 from "../../assets/bg-ybedu-02.svg";
+import IconCircle from "../../assets/icon-circle.svg";
+import LaFoca from "../../assets/logo-lafoca.svg";
+import SHMusic from "../../assets/logo-shmusic.svg";
 
 const actions = [
-    {
-        as: 'a',
-        label: 'Experiência YellowBagEdu',
-        href: 'https://forms.gle/VNJrn1twk2L1gYiBA'
-    },
-    {
-        as: 'a',
-        label: 'Movimento Social',
-        href: 'https://whatsapp.com/channel/0029VbAjLtbLtOjLVcWJO12o'
-    },
-    {   
-        as: 'button',
-        id: 1,
-        label: 'YellowBagEdu',
-    },
-    {
-        as: 'button',
-        id: 2,
-        label: 'Uniões & Parcerias',
-    }
+  {
+    as: "a",
+    label: "Experiência GRATUITA",
+    href: "https://forms.gle/VNJrn1twk2L1gYiBA",
+  },
+  {
+    as: "a",
+    label: "Jornada CriAnima",
+    href: "https://canva.link/2n9gyil4cz093tg",
+  },
+  {
+    as: "a",
+    label: "Movimento Social",
+    href: "https://whatsapp.com/channel/0029VbAjLtbLtOjLVcWJO12o",
+  },
+  {
+    as: "button",
+    id: 1,
+    label: "YellowBagEdu",
+  },
+  {
+    as: "button",
+    id: 2,
+    label: "Uniões & Parcerias",
+  },
 ];
 
 export default function BagSocialLinks() {
   const [open01, setOpen01] = useState(false);
   const [open02, setOpen02] = useState(false);
-  const [theme, setTheme] = useState(false)
+  const [theme, setTheme] = useState(false);
 
   return (
       <div className={theme ? "bg-gradient-02 min-h-240 md:min-h-320 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-240 md:min-h-320 flex items-center justify-center gap-6"}  >
@@ -53,29 +57,34 @@ export default function BagSocialLinks() {
             console.log("clicou");
             setTheme(!theme);
           }}
-          >
-            <img
-              src={toggleImg}
-              alt="Toggle de Temas"
-              className="w-17 h-12"/>
-          </button>
-          <main className="flex flex-col items-center justify-center gap-6">
-            {actions.map((action) => {
-              return (
-                  <ActionsButtons
-                    key={action.label}
-                    as={action.as}
-                    href={action.href}
-                    label={action.label}
-                    onClick={() => action.id === 1 ? setOpen01(true) : setOpen02(true)}
-                    Color = {theme ? "bg-(--color-tech-blue-light) text-(--color-white)" : "bg-(--color-color-yellow) text-(--color-color-dark-gray)"}
-                  />
-              );
-            })} 
-          </main>   
-        <Footer 
-        Color ={theme ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"}
-        />  
+        >
+          <img src={toggleImg} alt="Toggle de Temas" className="w-17 h-12" />
+        </button>
+        <main className="flex flex-col items-center justify-center gap-6">
+          {actions.map((action) => {
+            return (
+              <ActionsButtons
+                key={action.label}
+                as={action.as}
+                href={action.href}
+                label={action.label}
+                onClick={() =>
+                  action.id === 1 ? setOpen01(true) : setOpen02(true)
+                }
+                Color={
+                  theme
+                    ? "bg-(--color-tech-blue-light) text-(--color-white)"
+                    : "bg-(--color-color-yellow) text-(--color-color-dark-gray)"
+                }
+              />
+            );
+          })}
+        </main>
+        <Footer
+          Color={
+            theme ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"
+          }
+        />
       </div>
       <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
       {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
@@ -108,7 +117,7 @@ export default function BagSocialLinks() {
       <div className="bg-white w-80 h-58 rounded-2xl flex flex-col gap-6">
           <button
               className="self-end cursor-pointer"
-              onClick={() => setOpen02(false)}
+              onClick={() => setOpen01(false)}
             >
             <img src={IconCircle} alt="ícone para sair do Modal" />
           </button>
@@ -126,8 +135,8 @@ export default function BagSocialLinks() {
               <span className="font-semibold">@shmusic.escola2</span>
             </div>
           </div>
-        </div>
-        </Modal>}
+        </Modal>
+      )}
     </div>
-  )
-}  
+  );
+}
