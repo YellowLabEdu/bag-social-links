@@ -115,15 +115,15 @@ export default function BagSocialLinks() {
           onClose={() => setOpen01(false)}
           Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
         >
-          <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center justify-center gap-6">
+          <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center px-4 pb-4 pt-1">
             <button
               className="self-end cursor-pointer"
               onClick={() => setOpen01(false)}
             >
               <img src={IconCircle} alt="ícone para sair do Modal" />
             </button>
-            <div className=" w-80 flex flex-col items-center gap-8">
-              <div className=" w-80 flex flex-col items-center gap-9">
+            <div className="w-80 flex flex-1 flex-col items-center gap-8">
+              <div className="w-80 flex flex-col items-center gap-8">
                 <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">
                   Sobre a YellowBagEdu
                 </h2>
@@ -137,8 +137,7 @@ export default function BagSocialLinks() {
                 </p>
               </div>
               <button
-                className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
-       text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+                className="mt-auto mb-2 w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://www.instagram.com/yellowbagedu/",
@@ -147,7 +146,6 @@ export default function BagSocialLinks() {
                   )
                 }
               >
-                {" "}
                 SAIBA MAIS
               </button>
             </div>
