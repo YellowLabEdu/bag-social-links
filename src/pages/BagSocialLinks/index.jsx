@@ -46,31 +46,13 @@ export default function BagSocialLinks() {
   const [theme, setTheme] = useState(false);
 
   return (
-    <div
-      className={
-        theme
-          ? "bg-gradient-02 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
-          : "bg-gradient-01 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
-      }
-    >
-      <img
-        className="hidden lg:block max-w-83"
-        src={BgYellowBagEdu01}
-        alt="Background YellowBagEdu"
-      />
-      <div className="flex flex-col items-center justify-center gap-8 ">
-        <Header
-          Color={
-            theme ? "text-(--color-color-dark-gray)" : "text-(--color-white)"
-          }
-        />
-        <button
-          className={
-            theme
-              ? "flex items-center justify-center active:scale-95 transition rotate-y-0"
-              : "flex items-center justify-center active:scale-95 transition rotate-y-180"
-          }
-          aria-label="Alternar Tema"
+      <div className={theme ? "bg-gradient-02 min-h-240 md:min-h-320 flex items-center justify-center gap-6" : "bg-gradient-01 min-h-240 md:min-h-320 flex items-center justify-center gap-6"}  >
+        <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu01} alt="Background YellowBagEdu" />
+         <div className="flex flex-col items-center justify-center gap-16 ">
+          <Header 
+          Color = {theme ? "text-(--color-color-dark-gray)" : "text-(--color-white)"}
+          />
+          <button className={theme ? "flex items-center justify-center active:scale-95 transition rotate-y-0" : "flex items-center justify-center active:scale-95 transition rotate-y-180"} aria-label="Alternar Tema"
           onClick={() => {
             console.log("clicou");
             setTheme(!theme);
@@ -104,90 +86,53 @@ export default function BagSocialLinks() {
           }
         />
       </div>
-      <img
-        className="hidden lg:block max-w-83"
-        src={BgYellowBagEdu02}
-        alt="Background YellowBagEdu"
-      />
-      {open01 && (
-        <ModalBag
-          isOpen={open01}
-          onClose={() => setOpen01(false)}
-          Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
-        >
-          <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center px-4 pb-4 pt-1">
-            <button
+      <img className="hidden lg:block lg:scale-90" src={BgYellowBagEdu02} alt="Background YellowBagEdu" />  
+      {open01 && <ModalBag isOpen={open01} onClose={() => setOpen01(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>         
+    <div className="bg-(--color-white) w-84 h-88 rounded-2xl flex flex-col items-center justify-start gap-16">
+      <button
+        className="self-end cursor-pointer"
+        onClick={() => setOpen01(false)}
+      >
+        <img src={IconCircle} alt="ícone para sair do Modal" />
+      </button>
+      <div className=" w-80 flex flex-col items-center gap-4" >
+          <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">Sobre a YellowBagEdu</h2>
+          <p className="text-(--color-color-dark-gray) text-sm text-justify">
+            Somos uma StartUp do Norte do Brasil que transforma o ensino de Pensamento Computacional com inclusão, criatividade e acessibilidade.
+            <br /><br />
+            <span className="font-semibold">Instagram: @yellowbagedu</span> <br />
+            <span className="font-semibold">E-mail: institucional@yellowbagedu.com</span>
+          </p>
+        </div>
+        {/*
+        <button
+        className="w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl 
+        text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+        onClick={() => window.location.assign("https://www.instagram.com/yellowbagedu/?utm_source=site", '_blank', 'noopener,noreferrer')}
+        > SAIBA MAIS</button>
+        */}
+    </div>
+    </ModalBag>}
+    { open02 && <Modal isOpen={open02} onClose={() => setOpen02(false)} Color={theme ?  "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}>
+      <div className="bg-white w-80 h-58 rounded-2xl flex flex-col gap-6">
+          <button
               className="self-end cursor-pointer"
               onClick={() => setOpen01(false)}
             >
-              <img src={IconCircle} alt="ícone para sair do Modal" />
-            </button>
-            <div className="w-80 flex flex-1 flex-col items-center gap-8">
-              <div className="w-80 flex flex-col items-center gap-8">
-                <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">
-                  Sobre a YellowBagEdu
-                </h2>
-                <p className="text-(--color-color-dark-gray) text-sm text-justify">
-                  Somos uma Startup da Região Norte do Brasil que inova no
-                  ensino do Pensamento Computacional, unindo inclusão,
-                  criatividade e acessibilidade. Nossa missão é clara: todos
-                  merecem aprender tecnologia de forma prática e intuitiva.
-                  Preparamos seu(sua) filho(a) para o futuro digital. <br />{" "}
-                  <br />
-                </p>
-              </div>
-              <button
-                className="mt-auto mb-2 w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.instagram.com/yellowbagedu/",
-                    "_blank",
-                    "noopener,noreferrer",
-                  )
-                }
-              >
-                SAIBA MAIS
-              </button>
+            <img src={IconCircle} alt="ícone para sair do Modal" />
+          </button>
+          <div  className="flex justify-center items-center gap-6">
+            <div className="flex flex-col justify-center items-center gap-6">
+              <a className="cursor-pointer" href="https://www.instagram.com/lafocameta/?utm_source=website" target="_blank" rel="noopener noreferrer">
+                <img src={LaFoca} alt={`LaFoca logo`} />
+              </a>
+              <span className="font-semibold">@lafocameta</span>
             </div>
-          </div>
-        </ModalBag>
-      )}
-      {open02 && (
-        <Modal
-          isOpen={open02}
-          onClose={() => setOpen02(false)}
-          Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
-        >
-          <div className="bg-white w-80 h-58 rounded-2xl flex flex-col gap-6">
-            <button
-              className="self-end cursor-pointer"
-              onClick={() => setOpen02(false)}
-            >
-              <img src={IconCircle} alt="ícone para sair do Modal" />
-            </button>
-            <div className="flex justify-center items-center gap-6">
-              <div className="flex flex-col justify-center items-center gap-4">
-                <a
-                  className="cursor-pointer"
-                  href="https://www.instagram.com/lafocameta/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={LaFoca} alt={`LaFoca logo`} />
-                </a>
-                <span>@LAFoca</span>
-              </div>
-              <div className="flex flex-col justify-center items-center gap-4">
-                <a
-                  className="cursor-pointer"
-                  href="https://www.instagram.com/shmusic.escola2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={SHMusic} alt={`SHMusic logo`} />
-                </a>
-                <span>@SHMusic</span>
-              </div>
+            <div className="flex flex-col justify-center items-center gap-4">
+              <a className="cursor-pointer" href="https://www.instagram.com/shmusic.escola2/?utm_source=website" target="_blank" rel="noopener noreferrer">
+                <img src={SHMusic} alt={`SHMusic logo`} />
+              </a>
+              <span className="font-semibold">@shmusic.escola2</span>
             </div>
           </div>
         </Modal>
