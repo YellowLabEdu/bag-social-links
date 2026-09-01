@@ -30,7 +30,7 @@ const socialLinks = [
 ]
 
 export function Footer({Color}) {
-    const baseFooterClass = `w-60 md:w-80 h-16 z-1 ${Color} flex items-center justify-center gap-6 md:gap-[2.938rem] rounded-2xl border-4 border-(--color-white) p-2 shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer`;
+    const baseFooterClass = `w-64 h-16 z-1 ${Color} flex items-center justify-center gap-6 rounded-3xl border-4 border-(--color-white) p-2 shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer`;
     
     return (
         <footer className={baseFooterClass}>
