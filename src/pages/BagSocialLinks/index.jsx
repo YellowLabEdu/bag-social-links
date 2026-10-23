@@ -15,7 +15,7 @@ import SHMusic from "../../assets/logo-shmusic.svg";
 const actions = [
   {
     as: "a",
-    label: "Experiência GRATUITA",
+    label: "Agende uma experiência grátis",
     href: "https://forms.gle/VNJrn1twk2L1gYiBA",
   },
   {
@@ -36,7 +36,7 @@ const actions = [
   {
     as: "button",
     id: 2,
-    label: "Uniões & Parcerias",
+    label: "Uniões e parcerias",
   },
 ];
 
@@ -49,8 +49,8 @@ export default function BagSocialLinks() {
     <div
       className={
         theme
-          ? "bg-gradient-02 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
-          : "bg-gradient-01 min-h-240 md:min-h-260 flex items-center justify-center gap-6"
+          ? "bg-gradient-02 min-h-[54rem] md:min-h-dvh flex items-center justify-center gap-6"
+          : "bg-gradient-01 min-h-[54rem] md:min-h-dvh flex items-center justify-center gap-6"
       }
     >
       <img
@@ -58,7 +58,7 @@ export default function BagSocialLinks() {
         src={BgYellowBagEdu01}
         alt="Background YellowBagEdu"
       />
-      <div className="flex flex-col items-center justify-center gap-8 ">
+      <div className="flex flex-col items-center justify-center md:justify-start gap-6">
         <Header
           Color={
             theme ? "text-(--color-color-dark-gray)" : "text-(--color-white)"
