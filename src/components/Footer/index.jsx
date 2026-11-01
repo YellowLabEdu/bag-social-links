@@ -18,11 +18,13 @@ const socialLinks = [
         imgSrc: IconEmail,
         altText: "Logotipo Gmail",
     },
+    /*
     {
         href: `https://wa.me/${wppPhone}?text=${wppMessage}`,
         imgSrc: IconWhatsApp,
         altText: "Logotipo WhatsApp"
     },
+    */
     {
         href: "https://www.instagram.com/yellowbagedu/",
         imgSrc: IconInstagram,
