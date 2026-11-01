@@ -13,11 +13,18 @@ import LaFoca from "../../assets/logo-lafoca.svg";
 import SHMusic from "../../assets/logo-shmusic.svg";
 
 const actions = [
+    {
+    as: "a",
+    label: "Ajude a mapear a educação tecnológica",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSesumxy3eq8Yrp6mEUKT9Ag_ZMW_7DfyxJ5ZFQbKUm7SgNgjw/viewform",
+  },
+  /*
   {
     as: "a",
     label: "Agende uma experiência grátis",
     href: "https://forms.gle/VNJrn1twk2L1gYiBA",
   },
+  */
   {
     as: "a",
     label: "Jornada CriAnima",
@@ -31,7 +38,7 @@ const actions = [
   {
     as: "button",
     id: 1,
-    label: "YellowBagEdu",
+    label: "A YellowBagEdu",
   },
   {
     as: "button",
