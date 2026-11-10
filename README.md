@@ -19,7 +19,7 @@
 
 ### 💡 Sobre o Projeto
 
-O **Bag Social Links**, desenvolvido para a **YellowBagEdu**, uma startup paraense de educação 
+O **Bag Social Links**, foi desenvolvido para a **YellowBagEdu**, uma startup paraense de educação 
 criativa e tecnológica, reúne os principais canais da organização em um único espaço, facilitando 
 o acesso às suas iniciativas, conteúdos e redes sociais.
 
