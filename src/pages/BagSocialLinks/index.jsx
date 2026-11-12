@@ -54,29 +54,25 @@ export default function BagSocialLinks() {
 
   return (
     <div
-      className={
-        theme
-          ? "bg-gradient-02 min-h-[54rem] md:min-h-dvh flex items-center justify-center gap-6"
-          : "bg-gradient-01 min-h-[54rem] md:min-h-dvh flex items-center justify-center gap-6"
-      }
+      className={`min-h-screen w-full flex items-center justify-center px-4 py-8 sm:px-6 sm:py-12 md:py-16 gap-4 lg:gap-8 xl:gap-12 overflow-x-hidden transition-colors duration-300 ${
+        theme ? "bg-gradient-02" : "bg-gradient-01"
+      }`}
     >
       <img
-        className="hidden lg:block max-w-83"
+        className="hidden lg:block max-w-2xs xl:max-w-xs shrink-0 select-none pointer-events-none"
         src={BgYellowBagEdu01}
         alt="Background YellowBagEdu"
       />
-      <div className="flex flex-col items-center justify-center md:justify-start gap-6">
+      <div className="w-full max-w-md md:max-w-xl flex flex-col items-center justify-center gap-6 sm:gap-8 mx-auto">
         <Header
           Color={
             theme ? "text-(--color-color-dark-gray)" : "text-(--color-white)"
           }
         />
         <button
-          className={
-            theme
-              ? "flex items-center justify-center active:scale-95 transition rotate-y-0"
-              : "flex items-center justify-center active:scale-95 transition rotate-y-180"
-          }
+          className={`flex items-center justify-center my-1 sm:my-2 active:scale-95 transition-transform duration-200 cursor-pointer ${
+            theme ? "rotate-y-0" : "rotate-y-180"
+          }`}
           aria-label="Alternar Tema"
           onClick={() => {
             console.log("clicou");
@@ -85,7 +81,7 @@ export default function BagSocialLinks() {
         >
           <img src={toggleImg} alt="Toggle de Temas" className="w-17 h-12" />
         </button>
-        <main className="flex flex-col items-center justify-center gap-6">
+        <main className="w-full flex flex-col items-center justify-center gap-4 sm:gap-5 my-2">
           {actions.map((action) => {
             return (
               <ActionsButtons
@@ -105,14 +101,16 @@ export default function BagSocialLinks() {
             );
           })}
         </main>
-        <Footer
-          Color={
-            theme ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"
-          }
-        />
+        <div className="mt-2 sm:mt-4 flex justify-center w-full">
+          <Footer
+            Color={
+              theme ? "bg-(--color-tech-blue-light)" : "bg-(--color-color-yellow)"
+            }
+          />
+        </div>
       </div>
       <img
-        className="hidden lg:block max-w-83"
+        className="hidden lg:block max-w-2xs xl:max-w-xs shrink-0 select-none pointer-events-none"
         src={BgYellowBagEdu02}
         alt="Background YellowBagEdu"
       />
@@ -122,29 +120,29 @@ export default function BagSocialLinks() {
           onClose={() => setOpen01(false)}
           Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
         >
-          <div className="bg-white w-84 h-88 rounded-2xl flex flex-col items-center px-4 pb-4 pt-1">
+          <div className="bg-white w-full h-78 max-w-sm rounded-2xl flex flex-col items-center justify-center sm:p-6 shadow-xl">
             <button
-              className="self-end cursor-pointer"
+              className="self-end cursor-pointer p-1 mb-2 hover:opacity-75 transition-opacity"
               onClick={() => setOpen01(false)}
+              aria-label="Fechar modal"
             >
               <img src={IconCircle} alt="ícone para sair do Modal" />
             </button>
-            <div className="w-80 flex flex-1 flex-col items-center gap-8">
-              <div className="w-80 flex flex-col items-center gap-8">
+            <div className="w-full flex flex-col items-center justify-start sm:gap-8">
+              <div className="w-90 flex flex-col items-center sm:gap-6 text-center">
                 <h2 className="text-(--color-color-dark-gray) text-xl font-semibold">
                   Sobre a YellowBagEdu
                 </h2>
-                <p className="text-(--color-color-dark-gray) text-sm text-justify">
+                <p className="text-(--color-color-dark-gray) text-sm text-justify leading-relaxed">
                   Somos uma Startup da Região Norte do Brasil que inova no
                   ensino do Pensamento Computacional, unindo inclusão,
                   criatividade e acessibilidade. Nossa missão é clara: todos
                   merecem aprender tecnologia de forma prática e intuitiva.
-                  Preparamos seu(sua) filho(a) para o futuro digital. <br />{" "}
-                  <br />
+                  Preparamos seu(sua) filho(a) para o futuro digital.
                 </p>
               </div>
               <button
-                className="mt-auto mb-2 w-52 h-12 bg-(--color-tech-blue-light) rounded-2xl text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
+                className="w-52 h-14 bg-(--color-tech-blue-light) rounded-2xl text-white font-semibold hover:scale-95 transition-transform duration-200 cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://www.instagram.com/yellowbagedu/",
@@ -152,9 +150,9 @@ export default function BagSocialLinks() {
                     "noopener,noreferrer",
                   )
                 }
-              >
-                SAIBA MAIS
-              </button>
+                >
+              SAIBA MAIS
+            </button>  
             </div>
           </div>
         </ModalBag>
@@ -165,35 +163,36 @@ export default function BagSocialLinks() {
           onClose={() => setOpen02(false)}
           Color={theme ? "bg-(--color-color-yellow)" : "bg-(--color-blue-dark)"}
         >
-          <div className="bg-white w-80 h-58 rounded-2xl flex flex-col gap-6">
+          <div className="bg-white w-full max-w-sm rounded-2xl flex flex-col gap-6 p-5 sm:p-6 shadow-xl">
             <button
-              className="self-end cursor-pointer"
+              className="self-end cursor-pointer p-1 hover:opacity-75 transition-opacity"
               onClick={() => setOpen02(false)}
+              aria-label="Fechar modal"
             >
               <img src={IconCircle} alt="ícone para sair do Modal" />
             </button>
-            <div className="flex justify-center items-center gap-6">
+            <div className="flex justify-center items-center gap-8 py-2">
               <div className="flex flex-col justify-center items-center gap-4">
                 <a
-                  className="cursor-pointer"
+                  className="cursor-pointer hover:scale-110 transition-transform duration-200"
                   href="https://www.instagram.com/lafocameta/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={LaFoca} alt={`LaFoca logo`} />
                 </a>
-                <span>@LAFoca</span>
+                <span className="text-sm font-medium">@LAFoca</span>
               </div>
               <div className="flex flex-col justify-center items-center gap-4">
                 <a
-                  className="cursor-pointer"
+                  className="cursor-pointer hover:scale-110 transition-transform duration-200"
                   href="https://www.instagram.com/shmusic.escola2/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={SHMusic} alt={`SHMusic logo`} />
                 </a>
-                <span>@SHMusic</span>
+                <span className="text-sm font-medium">@SHMusic</span>
               </div>
             </div>
           </div>

@@ -3,14 +3,14 @@ import IconWhatsApp from "./assets/icon-whatsapp.svg";
 import IconInstagram from "./assets/icon-instagram.svg";
 import iconLinkedin from "./assets/icon-linkedin.svg";
 
-//* Predefined email parameters */
+//* Predefined email parameters 
 const email = "institucional@yellowbagedu.com";
 const subject = encodeURIComponent("Contato via YellowBagEdu Social Links");
 const body = encodeURIComponent("Olá, gostaria de mais informações sobre a YellowBagEdu.");
 
-//* Predefined WhatsApp parameters */
+//* Predefined WhatsApp parameters 
 const wppPhone = "5591993412953";
-const wppMessage = encodeURIComponent("Olá, gostaria de mais informações sobre a YellowBagEdu.");
+const wppMessage = encodeURIComponent("Olá, gostaria de mais informações sobre a YellowBagEdu!");
 
 const socialLinks = [
     {
@@ -18,13 +18,11 @@ const socialLinks = [
         imgSrc: IconEmail,
         altText: "Logotipo Gmail",
     },
-    /*
     {
         href: `https://wa.me/${wppPhone}?text=${wppMessage}`,
         imgSrc: IconWhatsApp,
         altText: "Logotipo WhatsApp"
     },
-    */
     {
         href: "https://www.instagram.com/yellowbagedu/",
         imgSrc: IconInstagram,
@@ -36,10 +34,8 @@ const socialLinks = [
         altText: "Logotipo LinkedIn"
     }
 ]
-
 export function Footer({Color}) {
-    const baseFooterClass = `w-60 md:w-80 h-16 z-1 ${Color} flex items-center justify-center gap-6 md:gap-[2.938rem] rounded-2xl border-4 border-(--color-white) p-2 shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer`;
-    
+    const baseFooterClass = `w-68 md:w-80 h-16 ${Color} flex items-center justify-center gap-6 md:gap-[2.938rem] rounded-2xl border-4 border-(--color-white) shadow-lg hover:scale-95 transition-transform duration-200 cursor-pointer`;
     return (
         <footer className={baseFooterClass}>
             {socialLinks.map(({ href, imgSrc, altText }) => (
